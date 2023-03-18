@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Redux Toolkit Demo App
+This is a demo React application that shows how to use Redux Toolkit for state management. It's a simple app that has 3 nested UI components, data in Grandparent and Parent component are changed by the input of child component.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
+Before you get started, make sure you have the following installed:
 
-## Available Scripts
+1. Node.js
+2. NPM or Yarn
+## Installation
+**Clone this repository to your local machine:**
 
-In the project directory, you can run:
+`git clone https://github.com/your-username/redux-toolkit-demo.git`
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Navigate to the project directory:**
+`cd redux-toolkit-demo`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+**Install the dependencies:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install`
+or
+`yarn install`
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Start the development server:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm start`
+or
 
-### `npm run eject`
+`yarn start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open your browser and go to http://localhost:3000 to view the app.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Implementation
+This demo app uses the following technologies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React.js
+Redux Toolkit
+The app consists of three components:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+App: The top-level component that acts as the Grandparent, it has a text field which is referred from the central redux store.
 
-## Learn More
+Parent: It's the mid-level component, where the background colour style is referred from the central redux store. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Child: It's the bottom-most component, it has 2 input fields, these inputs are send to central store, where the reducers edit the State with these inputs.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Redux store is configured in src/store.js, which uses the configureStore function from Redux Toolkit to create a store with a pre-configured set of middleware and reducer logic.
 
-### Code Splitting
+**For more details on how redux works and how to implement Redux-toolkit follow this article.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[May the State Be with You](https://debarshiraj.hashnode.dev/may-the-state-be-with-you-a-journey-to-simplify-state-management-in-react-using-redux-toolkit "A simple guide on how to implement Redux-Toolkit in a React App.").
 
-### Analyzing the Bundle Size
+## Contributing
+If you find a bug or want to contribute to the project, please feel free to submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
